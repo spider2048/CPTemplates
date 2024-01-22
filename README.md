@@ -11,7 +11,7 @@ Features:
 * Supports hot-reload (responds to changes in specified files)
 * Supports timers
 * Copies code on save to clipboard
-* Code is fully pastable
+* Code is fully pastable anywhere
 * Responds to Ctrl+C
 * Tested on Windows 11
 
@@ -28,3 +28,5 @@ ProcessHandler(
     timeout=1,
 )
 ```
+
+* Install requirements from `requirements.txt`
