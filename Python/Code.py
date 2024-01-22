@@ -5,12 +5,13 @@ import heapq
 import itertools
 import functools
 import time
+from collections import *
 
 MULTIPLE_TESTS = False
 
 
-def inp():
-    return list(map(int, input().split(" ")))
+def inp(ty=int):
+    return list(map(ty, input().split(" ")))
 
 
 def solve():
