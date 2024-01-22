@@ -30,3 +30,4 @@ ProcessHandler(
 ```
 
 * Install requirements from `requirements.txt`
+* Use [instructions](https://sp1d3r.vercel.app/posts/pycompile/) to compile the `local.py`.
