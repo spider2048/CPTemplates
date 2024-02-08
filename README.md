@@ -13,7 +13,7 @@ Features:
 * Copies code on save to clipboard
 * Code is fully pastable anywhere
 * Responds to Ctrl+C
-* Tested on Windows 11
+* Tested on Windows 11 and Linux
 
 Usage:
 
