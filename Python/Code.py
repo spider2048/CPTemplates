@@ -15,7 +15,7 @@ def inp(ty=int):
 
 
 def solve():
-    print(1 + 1)
+    print("3 + 3 =", 6)
 
 
 def main():

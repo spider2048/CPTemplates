@@ -47,6 +47,10 @@ class ProcessHandler:
         monitor: List[str],
         timeout: float = -1,
     ) -> None:
+        # Fix on linux
+        if sys.platform != 'win32':
+            multiprocessing.set_start_method('spawn')
+
         self.main: function = main
         self.props: Dict[str, str] = props
         self.timeout: float = timeout
