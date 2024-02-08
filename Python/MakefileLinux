@@ -1,0 +1,24 @@
+INCLUDE = -I /usr/include/python3.11
+LIBDIRS = -L /usr/lib/python3.11/config-3.11-x86_64-linux-gnu
+LIBS = -lm -lpython3.11
+CFLAGS = --shared -Wl,--export-dynamic -fPIC $(INCLUDE) $(LIBS) $(LIBDIRS)
+
+CYTHONFLAGS = -3
+
+SOURCE = local.py
+DESTINATION = local.so
+TMPFILE = a.c
+
+CC = gcc
+CYTHON = cython
+
+build $(DESTINATION): $(SOURCE)
+	@echo "Transpiling source ..."
+	@$(CYTHON) $(CYTHONFLAGS) $(SOURCE) -o $(TMPFILE)
+
+	@echo "Compiling $(TMPFILE) ..."
+	@$(CC) $(CFLAGS) $(TMPFILE) -o $(DESTINATION)
+	@rm $(TMPFILE)
+
+	@echo "Stripping $(DESTINATION) ..."
+	@strip -s $(DESTINATION)
